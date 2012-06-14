@@ -1,0 +1,10 @@
+#!/bin/sh -e
+FILES="arm128_start.elf arm192_start.elf arm224_start.elf bootcode.bin
+  kernel.img kernel_cutdown.img kernel_emergency.img loader.bin start.elf"
+
+for FN in $FILES; do
+  dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/$FN \
+    --rename /boot/$FN
+done
+
+#DEBHELPER#
