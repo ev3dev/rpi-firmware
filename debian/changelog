@@ -1,3 +1,9 @@
+raspberrypi-firmware (1.20120614-1) unstable; urgency=low
+
+  * firmware as of 1178c4db5
+
+ -- Alex Bradbury <asb@asbradbury.org>  Thu, 14 Jun 2012 14:37:56 +0100
+
 raspberrypi-firmware (1.0-1) unstable; urgency=low
 
   * Initial release of Debian packaging for the Raspberry Pi "firmware".
