@@ -2,6 +2,9 @@
 FILES="arm128_start.elf arm192_start.elf arm224_start.elf bootcode.bin
   kernel.img kernel_cutdown.img kernel_emergency.img loader.bin start.elf"
 
+# dpkg-divert will error out otherwise
+mkdir -p /usr/share/rpikernelhack
+
 for FN in $FILES; do
   dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/$FN \
     --rename /boot/$FN
