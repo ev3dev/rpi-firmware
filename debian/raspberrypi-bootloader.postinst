@@ -6,4 +6,6 @@ for FN in $FILES; do
   dpkg-divert --package rpikernelhack --remove --rename /boot/$FN
 done
 
+sync
+
 #DEBHELPER#
