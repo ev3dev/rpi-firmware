@@ -1,3 +1,9 @@
+raspberrypi-firmware (1.20120617-1) unstable; urgency=low
+
+  * firmware as of 2c095047f
+
+ -- Alex Bradbury <asb@asbradbury.org>  Sun, 17 Jun 2012 19:31:13 +0100
+
 raspberrypi-firmware (1.20120614-1) unstable; urgency=low
 
   * firmware as of 1178c4db5
