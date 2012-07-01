@@ -2,6 +2,16 @@
 FILES="arm128_start.elf arm192_start.elf arm224_start.elf bootcode.bin
   kernel.img kernel_cutdown.img kernel_emergency.img loader.bin start.elf"
 
+# Now make sure we keep the same memory split as before if possible
+if [ -e /boot/cur_memsplit.tmp ]; then
+  CUR_START_ELF_NAME=$(cat /boot/cur_memsplit.tmp)
+  rm /boot/cur_memsplit.tmp
+  cp -a "/usr/share/rpikernelhack/$CUR_START_ELF_NAME" /usr/share/rpikernelhack/start.elf
+else
+  printf "Was not able to detect current memory split\n"
+fi
+
+
 for FN in $FILES; do
   # Need to rm first to avoid error "rename involves overwriting ... with 
   # different file ..., not allowed

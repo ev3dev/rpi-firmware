@@ -5,6 +5,22 @@ FILES="arm128_start.elf arm192_start.elf arm224_start.elf bootcode.bin
 # dpkg-divert will error out otherwise
 mkdir -p /usr/share/rpikernelhack
 
+# Work out what the current memory split is
+get_sum() {
+  head "$1" --bytes=4K | md5sum - | cut -f 1 -d " "
+}
+
+[ -e /boot/start.elf ] && CUR_START_SUM=$(get_sum /boot/start.elf)
+
+for ELF_FILE in /boot/*_start.elf; do
+  ELF_SUM=$(get_sum "$ELF_FILE")
+  if [ $ELF_SUM = $CUR_START_SUM ]; then
+    CUR_START_ELF_NAME="$ELF_FILE"
+    printf "Your current start.elf is the same as %s\n" "$CUR_START_ELF_NAME"
+    printf "%s\n" "$(basename "$CUR_START_ELF_NAME")" > /boot/cur_memsplit.tmp
+  fi
+done
+
 for FN in $FILES; do
   dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/$FN \
     /boot/$FN
