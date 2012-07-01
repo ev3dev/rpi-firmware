@@ -3,9 +3,12 @@ FILES="arm128_start.elf arm192_start.elf arm224_start.elf bootcode.bin
   kernel.img kernel_cutdown.img kernel_emergency.img loader.bin start.elf"
 
 for FN in $FILES; do
+  # Need to rm first to avoid error "rename involves overwriting ... with 
+  # different file ..., not allowed
+  rm -f /boot/$FN
   dpkg-divert --package rpikernelhack --remove --rename /boot/$FN
+  sync
 done
 
-sync
 
 #DEBHELPER#

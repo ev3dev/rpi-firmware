@@ -2,7 +2,7 @@ raspberrypi-firmware (1.20120628-1) unstable; urgency=low
 
   * firmware as of c59283a672
 
- -- Alex Bradbury <asb@jaguar>  Sun, 01 Jul 2012 20:24:14 +0100
+ -- Alex Bradbury <asb@asbradbury.org>  Sun, 01 Jul 2012 20:58:14 +0100
 
 raspberrypi-firmware (1.20120617-1) unstable; urgency=low
 
