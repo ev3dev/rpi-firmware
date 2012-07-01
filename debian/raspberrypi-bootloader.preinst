@@ -7,7 +7,7 @@ mkdir -p /usr/share/rpikernelhack
 
 for FN in $FILES; do
   dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/$FN \
-    --rename /boot/$FN
+    /boot/$FN
 done
 
 #DEBHELPER#
