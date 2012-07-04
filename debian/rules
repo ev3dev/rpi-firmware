@@ -9,8 +9,6 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-export DEB_DH_SHLIBDEPS_ARGS=--ignore-missing-info
-
 %:
 	dh $@ --with quilt
 
@@ -21,3 +19,6 @@ override_dh_fixperms:
 
 override_dh_strip:
 	# don't strip anything
+
+override_dh_shlibdeps:
+	# this is not happy on armhf, let's just skip it
