@@ -1,7 +1,15 @@
+raspberrypi-firmware (1.20120706-1) unstable; urgency=low
+
+  * firmware as of 467b0b45e1
+  * Fix broken setting of ld-linux-armhf.so.3 symlink
+  * Add fallback mechanism for detecting current memory split
+
+ -- Alex Bradbury <asb@asbradbury.org>  Sat, 07 Jul 2012 13:51:37 +0100
+
 raspberrypi-firmware (1.20120701-1) unstable; urgency=low
 
   * firmware as of 0671d601
-  * add /lib/ld-linux/armhf.so.3 symlink for armhf
+  * add /lib/ld-linux-armhf.so.3 symlink for armhf
 
  -- Alex Bradbury <asb@asbradbury.org>  Wed, 04 Jul 2012 14:57:27 +0100
 
