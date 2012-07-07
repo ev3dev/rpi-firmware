@@ -2,10 +2,32 @@
 FILES="arm128_start.elf arm192_start.elf arm224_start.elf bootcode.bin
   kernel.img kernel_cutdown.img kernel_emergency.img loader.bin start.elf"
 
+# Work out what the current memory split is
+get_sum() {
+  head "$1" --bytes=4K | md5sum - | cut -f 1 -d " "
+}
+
+[ -e /boot/start.elf ] && CUR_START_SUM=$(get_sum /boot/start.elf)
+
+for ELF_FILE in /boot/*_start.elf; do
+  ELF_SUM=$(get_sum "$ELF_FILE")
+  if [ $ELF_SUM = $CUR_START_SUM ]; then
+    CUR_START_ELF_NAME=$(basename "$ELF_FILE")
+    printf "Your current start.elf is the same as %s\n" "$CUR_START_ELF_NAME"
+  fi
+done
+
+if [ -z "$CUR_START_ELF_NAME" ]; then
+  printf "Falling back to detecting memory split via current available RAM\n"
+  MEM_MB=$(awk '/MemTotal/{printf("%.0f",  $2/1024)}' /proc/meminfo)
+  TMPVAR=$(($MEM_MB + 32 - 1))
+  ARMMEM=$(echo "$TMPVAR" | awk '{print $1 - ($1 % 32)}')
+  printf "Detected amount of memory available to ARM as %s\n" "$ARMMEM"
+  CUR_START_ELF_NAME="arm${ARMMEM}_start.elf"
+fi
+
 # Now make sure we keep the same memory split as before if possible
-if [ -e /boot/cur_memsplit.tmp ]; then
-  CUR_START_ELF_NAME=$(cat /boot/cur_memsplit.tmp)
-  rm /boot/cur_memsplit.tmp
+if [ -n "$CUR_START_ELF_NAME" ] && [ -e "/usr/share/rpikernelhack/$CUR_START_ELF_NAME" ]; then
   cp -a "/usr/share/rpikernelhack/$CUR_START_ELF_NAME" /usr/share/rpikernelhack/start.elf
 else
   printf "Was not able to detect current memory split\n"
