@@ -6,6 +6,6 @@ if [ "$1" = "configure" ]; then
   ldconfig;
 fi
 
-if [ "$(dpkg --print-architecture)" -eq armhf ]; then
+if [ "$(dpkg --print-architecture)" = armhf ]; then
   ln -s /lib/ld-linux-armhf.so.3 /lib/ld-linux.so.3 || true
 fi
