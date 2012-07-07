@@ -10,14 +10,16 @@ get_sum() {
 [ -e /boot/start.elf ] && CUR_START_SUM=$(get_sum /boot/start.elf)
 
 for ELF_FILE in /boot/*_start.elf; do
-  ELF_SUM=$(get_sum "$ELF_FILE")
-  if [ $ELF_SUM = $CUR_START_SUM ]; then
-    CUR_START_ELF_NAME=$(basename "$ELF_FILE")
-    printf "Your current start.elf is the same as %s\n" "$CUR_START_ELF_NAME"
+  if [ -e "$ELF_FILE" ]; then # check the glob didn't fail to expand
+    ELF_SUM=$(get_sum "$ELF_FILE")
+    if [ $ELF_SUM = $CUR_START_SUM ]; then
+      CUR_START_ELF_NAME=$(basename "$ELF_FILE")
+      printf "Your current start.elf is the same as %s\n" "$CUR_START_ELF_NAME"
+    fi
   fi
 done
 
-if [ -z "$CUR_START_ELF_NAME" ]; then
+if [ -z "$CUR_START_ELF_NAME" ] && [ -e /proc/meminfo ]; then
   printf "Falling back to detecting memory split via current available RAM\n"
   MEM_MB=$(awk '/MemTotal/{printf("%.0f",  $2/1024)}' /proc/meminfo)
   TMPVAR=$(($MEM_MB + 32 - 1))
