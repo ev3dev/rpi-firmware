@@ -1,6 +1,6 @@
 Source: raspberrypi-firmware
 Priority: extra
-Maintainer: Will Thompson <will.thompson@collabora.co.uk>
+Maintainer: Alex Bradbury <asb@asbradbury.org>
 Build-Depends: debhelper (>= 8.0.0), quilt
 Standards-Version: 3.9.2
 Section: libs
