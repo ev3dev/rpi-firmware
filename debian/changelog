@@ -1,3 +1,9 @@
+raspberrypi-firmware (1.20120712-1) unstable; urgency=low
+
+  * firmware as of 01c78fe345
+
+ -- Alex Bradbury <asb@asbradbury.org>  Fri, 13 Jul 2012 10:48:31 +0100
+
 raspberrypi-firmware (1.20120706-2) unstable; urgency=low
 
   * fix /opt/vc/src/hello_pi dest dir on armhf
