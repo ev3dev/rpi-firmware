@@ -1,3 +1,9 @@
+raspberrypi-firmware (1.20120801-2) unstable; urgency=low
+
+  * fix silly packaging mistake
+
+ -- Alex Bradbury <asb@asbradbury.org>  Wed, 01 Aug 2012 22:37:24 +0100
+
 raspberrypi-firmware (1.20120801-1) unstable; urgency=low
 
   * firmware as of 0a2e8d4095
