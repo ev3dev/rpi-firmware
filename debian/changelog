@@ -1,3 +1,9 @@
+raspberrypi-firmware (1.20120808-1) unstable; urgency=low
+
+  * firmware as of 7680bb38ee
+
+ -- Alex Bradbury <asb@asbradbury.org>  Wed, 08 Aug 2012 17:04:11 +0100
+
 raspberrypi-firmware (1.20120801-2) unstable; urgency=low
 
   * fix silly packaging mistake
