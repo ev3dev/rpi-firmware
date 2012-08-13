@@ -1,0 +1,5 @@
+/opt/vc/bin/edidparser /usr/bin/edidparser
+/opt/vc/bin/tvservice /usr/bin/tvservice
+/opt/vc/bin/vcdbg /usr/bin/vcdbg
+/opt/vc/bin/vcgencmd /usr/bin/vcgemcmd
+/opt/vc/bin/vchiq_test /usr/bin/vchiq_test
