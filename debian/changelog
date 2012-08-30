@@ -1,3 +1,11 @@
+raspberrypi-firmware (1.20120830-1) unstable; urgency=low
+
+  * firmware as of d5e9e96a66
+  * NOTE: yesterday's firmware and today's are both misversioned, as I should 
+    have versioned according to the date of the firmware update.
+
+ -- Alex Bradbury <asb@asbradbury.org>  Thu, 30 Aug 2012 20:36:26 +0100
+
 raspberrypi-firmware (1.20120829-1) unstable; urgency=low
 
   * firmware as of 59059dea7a
