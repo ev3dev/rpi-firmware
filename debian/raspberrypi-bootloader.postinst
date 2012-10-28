@@ -1,6 +1,6 @@
 #!/bin/sh -e
-FILES="arm128_start.elf arm192_start.elf arm224_start.elf arm240_start.elf bootcode.bin
-  kernel.img kernel_cutdown.img kernel_emergency.img start.elf"
+FILES="bootcode.bin fixup.dat fixup_cd.dat kernel.img
+  kernel_cutdown.img kernel_emergency.img start.elf start_cd.elf"
 
 # Work out what the current memory split is
 get_sum() {
