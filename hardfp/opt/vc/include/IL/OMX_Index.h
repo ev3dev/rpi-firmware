@@ -351,7 +351,7 @@ typedef enum OMX_INDEXTYPE {
     OMX_IndexConfigBrcmVideoEncoderMBRowsPerSlice, /**< reference: OMX_PARAM_U32TYPE */
     OMX_IndexParamCameraAFAssistDeviceNumber_Deprecated,   /**< reference: OMX_PARAM_U32TYPE */
     OMX_IndexParamCameraPrivacyIndicatorDeviceNumber_Deprecated,   /**< reference: OMX_PARAM_U32TYPE */
-    OMX_IndexParamCameraUseCase,                /**< reference: OMX_PARAM_CAMERAUSECASETYPE */
+    OMX_IndexConfigCameraUseCase,               /**< reference: OMX_CONFIG_CAMERAUSECASETYPE */
     OMX_IndexParamBrcmDisableProprietaryTunnels,   /**< reference: OMX_PARAM_BRCMDISABLEPROPRIETARYTUNNELSTYPE */
     OMX_IndexParamBrcmOutputBufferSize,         /**<  reference: OMX_PARAM_BRCMOUTPUTBUFFERSIZETYPE */
     OMX_IndexParamBrcmRetainMemory,             /**< reference: OMX_PARAM_BRCMRETAINMEMORYTYPE */
@@ -436,7 +436,7 @@ typedef enum OMX_INDEXTYPE {
     OMX_IndexParamCommonUseStcTimestamps,      /**< reference: OMX_PARAM_TIMESTAMPMODETYPE */
     OMX_IndexConfigBufferStall,                /**< reference: OMX_CONFIG_BUFFERSTALLTYPE */
     OMX_IndexConfigRefreshCodec,               /**< reference: OMX_CONFIG_BOOLEANTYPE */
-    OMX_IndexParamCaptureStatus,               /**< reference: OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexParamCaptureStatus,               /**< reference: OMX_PARAM_CAPTURESTATETYPE */
     OMX_IndexConfigTimeInvalidStartTime,       /**< reference: OMX_TIME_CONFIG_TIMESTAMPTYPE */
     OMX_IndexConfigLatencyTarget,              /**< reference: OMX_CONFIG_LATENCYTARGETTYPE */
     OMX_IndexConfigMinimiseFragmentation,      /**< reference: OMX_CONFIG_BOOLEANTYPE */
@@ -469,9 +469,35 @@ typedef enum OMX_INDEXTYPE {
 
     // 0x7f0000c0
     OMX_IndexParamBrcmVideoRCSliceDQuant,      /**< reference: OMX_PARAM_U32TYPE */
-    OMX_IndexConfigBrcmVideoH264UseCABAC,      /**< reference: OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexParamBrcmVideoFrameLimitBits,     /**< reference: OMX_PARAM_U32TYPE */
+    OMX_IndexParamBrcmVideoPeakRate,           /**< reference: OMX_PARAM_U32TYPE */
+    OMX_IndexConfigBrcmVideoH264DisableCABAC,  /**< reference: OMX_CONFIG_BOOLEANTYPE */
     OMX_IndexConfigBrcmVideoH264LowLatency,    /**< reference: OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexConfigBrcmVideoH264AUDelimiters,  /**< reference: OMX_CONFIG_BOOLEANTYPE */
     OMX_IndexConfigBrcmVideoH264DeblockIDC,    /**< reference: OMX_PARAM_U32TYPE */
+    OMX_IndexConfigBrcmVideoH264IntraMBMode,   /**< reference: OMX_PARAM_U32TYPE */
+    OMX_IndexConfigContrastEnhance,            /**< reference: OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexParamCameraCustomSensorConfig,    /**< reference: OMX_PARAM_U32TYPE */
+    OMX_IndexParamBrcmHeaderOnOpen,            /**< reference: OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexConfigBrcmUseRegisterFile,        /**< reference: OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexConfigBrcmRegisterFileFailFatal,  /**< reference: OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexParamBrcmConfigFileRegisters,     /**< reference: OMX_PARAM_BRCMCONFIGFILETYPE */
+    OMX_IndexParamBrcmConfigFileChunkRegisters,/**< reference: OMX_PARAM_BRCMCONFIGFILECHUNKTYPE */
+    OMX_IndexParamBrcmAttachLog,               /**< reference: OMX_CONFIG_BOOLEANTYPE */
+
+    // 0x7f0000d0
+    OMX_IndexParamCameraZeroShutterLag,        /**< reference: OMX_CONFIG_ZEROSHUTTERLAGTYPE */
+    OMX_IndexParamBrcmFpsRange,                /**< reference: OMX_PARAM_BRCMFRAMERATERANGETYPE */
+    OMX_IndexParamCaptureExposureCompensation, /**< reference: OMX_PARAM_S32TYPE */
+    OMX_IndexParamBrcmVideoPrecodeForQP,       /**< reference: OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexParamBrcmVideoTimestampFifo,      /**< reference: OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexParamSWSharpenDisable,            /**< reference: OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexConfigBrcmFlashRequired,          /**< reference: OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexParamBrcmVideoDrmProtectBuffer,   /**< reference: OMX_PARAM_BRCMVIDEODRMPROTECTBUFFERTYPE */
+    OMX_IndexParamSWSaturationDisable,         /**< reference: OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexParamBrcmVideoDecodeConfigVD3,    /**< reference: OMX_PARAM_BRCMVIDEODECODECONFIGVD3TYPE */
+    OMX_IndexConfigBrcmPowerMonitor,           /**< reference: OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexParamBrcmZeroCopy,                /**< reference: OMX_CONFIG_PORTBOOLEANTYPE */
 
     // 0x7f0000f0
     OMX_IndexConfigBrcmAudioDownmixCoefficients = 0x7f0000f0, /**< reference: OMX_CONFIG_BRCMAUDIODOWNMIXCOEFFICIENTS */
