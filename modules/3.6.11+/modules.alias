@@ -10,6 +10,9 @@ alias devname:fuse fuse
 alias char-major-10-229 fuse
 alias devname:btrfs-control btrfs
 alias char-major-10-234 btrfs
+alias cipher_null crypto_null
+alias digest_null crypto_null
+alias compress_null crypto_null
 alias sha256 sha256_generic
 alias sha224 sha256_generic
 alias sha512 sha512_generic
@@ -710,7 +713,6 @@ alias usb:v04F2pAFF7d*dc*dsc*dp*ic*isc*ip*in* 8192cu
 alias usb:v13D3p3358d*dc*dsc*dp*ic*isc*ip*in* 8192cu
 alias usb:v13D3p3359d*dc*dsc*dp*ic*isc*ip*in* 8192cu
 alias usb:v0BDAp317Fd*dc*dsc*dp*ic*isc*ip*in* 8192cu
-alias usb:v0846p9041d*dc*dsc*dp*ic*isc*ip*in* 8192cu
 alias usb:v2019pAB2Ed*dc*dsc*dp*ic*isc*ip*in* 8192cu
 alias usb:v2019p4902d*dc*dsc*dp*ic*isc*ip*in* 8192cu
 alias usb:v4856p0091d*dc*dsc*dp*ic*isc*ip*in* 8192cu
@@ -1151,7 +1153,8 @@ alias usb:v8086p0188d*dc*dsc*dp*ic*isc*ip*in* i2400m_usb
 alias usb:v8086p0186d*dc*dsc*dp*ic*isc*ip*in* i2400m_usb
 alias usb:v07B4p010Ad0102dc*dsc*dp*ic*isc*ip*in* ums_alauda
 alias usb:v0584p0008d0102dc*dsc*dp*ic*isc*ip*in* ums_alauda
-alias usb:v14CDp6116d*dc*dsc*dp*ic*isc*ip*in* ums_cypress
+alias usb:v14CDp6116d0[0-1]*dc*dsc*dp*ic*isc*ip*in* ums_cypress
+alias usb:v14CDp6116d02[0-1]*dc*dsc*dp*ic*isc*ip*in* ums_cypress
 alias usb:v04B4p6831d*dc*dsc*dp*ic*isc*ip*in* ums_cypress
 alias usb:v04B4p6830d*dc*dsc*dp*ic*isc*ip*in* ums_cypress
 alias usb:v0C0BpA109d*dc*dsc*dp*ic*isc*ip*in* ums_datafab
@@ -1488,6 +1491,7 @@ alias usb:v10C4p0F91d*dc*dsc*dp*ic*isc*ip*in* cp210x
 alias usb:v10B5pAC70d*dc*dsc*dp*ic*isc*ip*in* cp210x
 alias usb:v10ABp10C5d*dc*dsc*dp*ic*isc*ip*in* cp210x
 alias usb:v10A6pAA26d*dc*dsc*dp*ic*isc*ip*in* cp210x
+alias usb:v0FDEpCA05d*dc*dsc*dp*ic*isc*ip*in* cp210x
 alias usb:v0FCFp1006d*dc*dsc*dp*ic*isc*ip*in* cp210x
 alias usb:v0FCFp1004d*dc*dsc*dp*ic*isc*ip*in* cp210x
 alias usb:v0FCFp1003d*dc*dsc*dp*ic*isc*ip*in* cp210x
@@ -2884,6 +2888,7 @@ alias usb:v1C9Ep9607d*dc*dsc*dp*ic*isc*ip*in* option
 alias usb:v1C9Ep9603d*dc*dsc*dp*ic*isc*ip*in* option
 alias usb:v20B9p1682d*dc*dsc*dp*ic*isc*ip*in* option
 alias usb:v1011p3198d*dc*dsc*dp*ic*isc*ip*in* option
+alias usb:v1BBBp011Ed*dc*dsc*dp*ic*isc*ip*in* option
 alias usb:v1BBBp0017d*dc*dsc*dp*ic*isc*ip*in* option
 alias usb:v1BBBp0000d*dc*dsc*dp*ic*isc*ip*in* option
 alias usb:v1E0Ep9200d*dc*dsc*dp*icFFiscFFipFFin* option
@@ -5043,6 +5048,7 @@ alias usb:v2040pC603d*dc*dsc*dp*ic*isc*ip*in* dvb_usb_mxl111sf
 alias usb:v2040pC602d*dc*dsc*dp*ic*isc*ip*in* dvb_usb_mxl111sf
 alias usb:v2040pC601d*dc*dsc*dp*ic*isc*ip*in* dvb_usb_mxl111sf
 alias usb:v2040pC600d*dc*dsc*dp*ic*isc*ip*in* dvb_usb_mxl111sf
+alias usb:v1F4DpA803d*dc*dsc*dp*ic*isc*ip*in* dvb_usb_rtl28xxu
 alias usb:v0CCDp00B3d*dc*dsc*dp*ic*isc*ip*in* dvb_usb_rtl28xxu
 alias usb:v1F4DpB803d*dc*dsc*dp*ic*isc*ip*in* dvb_usb_rtl28xxu
 alias usb:v0CCDp00A9d*dc*dsc*dp*ic*isc*ip*in* dvb_usb_rtl28xxu
@@ -6115,5 +6121,7 @@ alias net-pf-31 bluetooth
 alias bt-proto-3 rfcomm
 alias bt-proto-4 bnep
 alias bt-proto-6 hidp
+alias net-pf-10-proto-132 sctp
+alias net-pf-2-proto-132 sctp
 alias net-pf-16-proto-16-family-nfc nfc
 alias net-pf-39 nfc
