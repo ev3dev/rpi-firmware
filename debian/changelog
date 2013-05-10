@@ -1,3 +1,9 @@
+raspberrypi-firmware (1.20130505-3) unstable; urgency=low
+
+  * disable /etc/asound.conf if it uses mmap_emul as it is no longer necessary
+
+ --  <asb@asbradbury.org>  Fri, 10 May 2013 11:23:53 +0000
+
 raspberrypi-firmware (1.20130505-1) unstable; urgency=low
 
   * firmware as of de687862fa8365ad7

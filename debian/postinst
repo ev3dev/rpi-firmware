@@ -17,4 +17,5 @@ if [ -e /etc/asound.conf ]; then
     printf "add the string LEAVE_ME_ALONE to your /etc/asound.conf as a comment\n"
     printf "If you don't know what an /etc/asound.conf is, don't worry about this message\n"
     mv /etc/asound.conf /etc/asound.conf.disabled
+  fi
 fi
