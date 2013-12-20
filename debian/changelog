@@ -1,3 +1,9 @@
+raspberrypi-firmware (1.20131219-1) unstable; urgency=low
+
+  * firmware as of c32bc633039cd9
+
+ --  <asb@asbradbury.org>  Fri, 20 Dec 2013 11:03:43 +0000
+
 raspberrypi-firmware (1.20131209-1) unstable; urgency=low
 
   * firmware as of 9d34d0475f9
