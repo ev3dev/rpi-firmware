@@ -32,9 +32,6 @@ sync
 rm -f /boot/kernel7.img
 dpkg-divert --package rpikernelhack --remove --rename /boot/kernel7.img
 sync
-rm -f /boot/overlays
-dpkg-divert --package rpikernelhack --remove --rename /boot/overlays
-sync
 rm -f /boot/start.elf
 dpkg-divert --package rpikernelhack --remove --rename /boot/start.elf
 sync
