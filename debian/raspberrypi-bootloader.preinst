@@ -1,5 +1,6 @@
 #!/bin/sh
 mkdir -p /usr/share/rpikernelhack/overlays
+mkdir -p /boot/overlays
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/COPYING.linux /boot/COPYING.linux
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/LICENCE.broadcom /boot/LICENCE.broadcom
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/bcm2708-rpi-b-plus.dtb /boot/bcm2708-rpi-b-plus.dtb

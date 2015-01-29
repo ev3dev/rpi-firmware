@@ -18,6 +18,7 @@ printf "#DEBHELPER#\n" >> raspberrypi-bootloader.postinst
 
 printf "#!/bin/sh\n" > raspberrypi-bootloader.preinst
 printf "mkdir -p /usr/share/rpikernelhack/overlays\n" >> raspberrypi-bootloader.preinst
+printf "mkdir -p /boot/overlays\n" >> raspberrypi-bootloader.preinst
 for FN in ../boot/* ../boot/*/*; do
   if ! [ -d "$FN" ]; then
     FN=${FN#../boot/}
