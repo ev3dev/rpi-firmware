@@ -11,6 +11,9 @@ sync
 rm -f /boot/bcm2708-rpi-b.dtb
 dpkg-divert --package rpikernelhack --remove --rename /boot/bcm2708-rpi-b.dtb
 sync
+rm -f /boot/bcm2709-rpi-2-b.dtb
+dpkg-divert --package rpikernelhack --remove --rename /boot/bcm2709-rpi-2-b.dtb
+sync
 rm -f /boot/bootcode.bin
 dpkg-divert --package rpikernelhack --remove --rename /boot/bootcode.bin
 sync
@@ -25,6 +28,9 @@ dpkg-divert --package rpikernelhack --remove --rename /boot/fixup_x.dat
 sync
 rm -f /boot/kernel.img
 dpkg-divert --package rpikernelhack --remove --rename /boot/kernel.img
+sync
+rm -f /boot/kernel7.img
+dpkg-divert --package rpikernelhack --remove --rename /boot/kernel7.img
 sync
 rm -f /boot/overlays
 dpkg-divert --package rpikernelhack --remove --rename /boot/overlays
