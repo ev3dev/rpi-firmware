@@ -1,3 +1,9 @@
+raspberrypi-firmware (1.20150208-1) unstable; urgency=low
+
+  * firmware as of a43480416153e8
+
+ --  <asb@asbradbury.org>  Thu, 12 Feb 2015 16:30:12 +0000
+
 raspberrypi-firmware (1.20150130-1) unstable; urgency=low
 
   * firmware as of 1f56136651963e
