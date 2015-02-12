@@ -16,6 +16,7 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/start.elf 
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/start_cd.elf /boot/start_cd.elf
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/start_x.elf /boot/start_x.elf
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/README /boot/overlays/README
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/ds1307-rtc-overlay.dtb /boot/overlays/ds1307-rtc-overlay.dtb
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-amp-overlay.dtb /boot/overlays/hifiberry-amp-overlay.dtb
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-dac-overlay.dtb /boot/overlays/hifiberry-dac-overlay.dtb
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-dacplus-overlay.dtb /boot/overlays/hifiberry-dacplus-overlay.dtb
@@ -23,6 +24,7 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/h
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/iqaudio-dac-overlay.dtb /boot/overlays/iqaudio-dac-overlay.dtb
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/iqaudio-dacplus-overlay.dtb /boot/overlays/iqaudio-dacplus-overlay.dtb
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/lirc-rpi-overlay.dtb /boot/overlays/lirc-rpi-overlay.dtb
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/pcf2127-rtc-overlay.dtb /boot/overlays/pcf2127-rtc-overlay.dtb
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/pcf8523-rtc-overlay.dtb /boot/overlays/pcf8523-rtc-overlay.dtb
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/pps-gpio-overlay.dtb /boot/overlays/pps-gpio-overlay.dtb
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/w1-gpio-overlay.dtb /boot/overlays/w1-gpio-overlay.dtb

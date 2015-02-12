@@ -44,6 +44,9 @@ sync
 rm -f /boot/overlays/README
 dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/README
 sync
+rm -f /boot/overlays/ds1307-rtc-overlay.dtb
+dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/ds1307-rtc-overlay.dtb
+sync
 rm -f /boot/overlays/hifiberry-amp-overlay.dtb
 dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/hifiberry-amp-overlay.dtb
 sync
@@ -64,6 +67,9 @@ dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/iqaudio-dac
 sync
 rm -f /boot/overlays/lirc-rpi-overlay.dtb
 dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/lirc-rpi-overlay.dtb
+sync
+rm -f /boot/overlays/pcf2127-rtc-overlay.dtb
+dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/pcf2127-rtc-overlay.dtb
 sync
 rm -f /boot/overlays/pcf8523-rtc-overlay.dtb
 dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/pcf8523-rtc-overlay.dtb
