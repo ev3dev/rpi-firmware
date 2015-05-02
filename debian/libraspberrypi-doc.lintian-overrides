@@ -1,0 +1,2 @@
+# using /opt to match other distros
+libraspberrypi-doc binary: dir-or-file-in-opt

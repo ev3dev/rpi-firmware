@@ -1,0 +1,4 @@
+# .elf files are detected as foreign arch
+raspberrypi-bootloader binary: binary-from-other-architecture
+# and .elf files have embedded libraries
+raspberrypi-bootloader binary: embedded-library

@@ -1,0 +1,6 @@
+# using /opt to match other distros
+libraspberrypi-bin binary: dir-or-file-in-opt
+
+# we purposely did not strip binaries in library
+libraspberrypi-bin binary: unstripped-binary-or-object
+libraspberrypi-bin binary: hardening-no-relro
