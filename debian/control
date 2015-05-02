@@ -1,12 +1,13 @@
 Source: raspberrypi-firmware
 Priority: extra
-Maintainer: Alex Bradbury <asb@asbradbury.org>
+Maintainer: David Lechner <david@lechnology.com>
+XSBC-Original-Maintainer: Alex Bradbury <asb@asbradbury.org>
 Build-Depends: debhelper (>= 8.0.0), quilt
-Standards-Version: 3.9.2
+Standards-Version: 3.9.5
 Section: libs
 Homepage: https://github.com/raspberrypi/firmware
-#Vcs-Git: todo
-#Vcs-Browser: todo
+Vcs-Git: git://github.com/ev3dev/rpi-firmware.git
+Vcs-Browser: https://github.com/ev3dev/rpi-firmware
 
 Package: libraspberrypi0
 Section: libs
