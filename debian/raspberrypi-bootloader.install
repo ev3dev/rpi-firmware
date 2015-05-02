@@ -1,6 +1,6 @@
 # FIXME: make choice of CPU/GPU memory split a debconf option?
-boot/*
-
-# FIXME: kernels should happen separately
-boot/kernel*.img
-modules /lib/
+boot/*.dtb /boot/flash/
+boot/*.bin /boot/flash/
+boot/*.dat /boot/flash/
+boot/*.elf /boot/flash/
+boot/overlays/* /boot/flash/overlays/
