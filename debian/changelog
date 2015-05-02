@@ -1,3 +1,12 @@
+raspberrypi-firmware (1.20150212-1ev3dev1) stable; urgency=medium
+
+  * ev3dev takeover
+  * Add lintian overrides
+  * Don't install kernel or modules.
+  * Remove manual call to ldconfig from postinst/postrm
+
+ -- David Lechner <david@lechnology.com>  Fri, 01 May 2015 22:22:01 -0500
+
 raspberrypi-firmware (1.20150212-1) unstable; urgency=low
 
   * firmware as of 47bd0f0f46b
