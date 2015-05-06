@@ -20,6 +20,9 @@ override_dh_quilt_unpatch:
 	[ -f boot/overlays/README ] || mv boot/overlays/README.overlays boot/overlays/README
 	dh_quilt_unpatch
 
+override_dh_installudev:
+	dh_installudev --name=local-rpi --priority=10
+
 override_dh_fixperms:
 	dh_fixperms
 	chown -R :users debian/libraspberrypi-doc/opt/vc/src/hello_pi
