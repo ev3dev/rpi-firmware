@@ -1,3 +1,4 @@
 # we purposely did not strip binaries in library
 libraspberrypi0 binary: unstripped-binary-or-object
 libraspberrypi0 binary: hardening-no-relro
+libraspberrypi0 binary: missing-dependency-on-libc

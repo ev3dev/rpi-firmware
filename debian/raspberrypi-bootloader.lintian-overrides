@@ -2,3 +2,5 @@
 raspberrypi-bootloader binary: binary-from-other-architecture
 # and .elf files have embedded libraries
 raspberrypi-bootloader binary: embedded-library
+# this is a bootloader, so statically linked is OK
+raspberrypi-bootloader binary: statically-linked-binary
