@@ -1,4 +1,4 @@
 # FIXME: make choice of CPU/GPU memory split a debconf option?
-boot/*.bin /boot/flash/
-boot/*.dat /boot/flash/
-boot/*.elf /boot/flash/
+boot/*.bin /usr/lib/raspberrypi-bootloader/
+boot/*.dat /usr/lib/raspberrypi-bootloader/
+boot/*.elf /usr/lib/raspberrypi-bootloader/

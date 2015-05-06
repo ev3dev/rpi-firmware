@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+# copy the bootloader files to the FAT partition on the SD card
+tempdir=$(mktemp -dt "rpi-boot.XXXXXXXX")
+mount /dev/mmcblk0p1 ${tempdir}
+cp /usr/lib/raspberrypi-bootloader/* ${tempdir}
+umount ${tempdir}
+
+#DEBHELPER#
