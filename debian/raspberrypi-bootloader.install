@@ -1,6 +1,4 @@
 # FIXME: make choice of CPU/GPU memory split a debconf option?
-boot/*.dtb /boot/flash/
 boot/*.bin /boot/flash/
 boot/*.dat /boot/flash/
 boot/*.elf /boot/flash/
-boot/overlays/* /boot/flash/overlays/
