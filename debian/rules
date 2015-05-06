@@ -12,6 +12,14 @@
 %:
 	dh $@ --with quilt
 
+override_dh_quilt_patch:
+	dh_quilt_patch
+	[ -f boot/overlays/README.overlays ] || mv boot/overlays/README boot/overlays/README.overlays
+
+override_dh_quilt_unpatch:
+	[ -f boot/overlays/README ] || mv boot/overlays/README.overlays boot/overlays/README
+	dh_quilt_unpatch
+
 override_dh_fixperms:
 	dh_fixperms
 	chown -R :users debian/libraspberrypi-doc/opt/vc/src/hello_pi
