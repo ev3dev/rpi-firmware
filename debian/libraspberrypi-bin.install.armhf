@@ -1,2 +1,2 @@
-hardfp/opt/vc/bin/* /opt/vc/bin/
-hardfp/opt/vc/sbin/* /opt/vc/sbin/
+hardfp/opt/vc/bin/* /usr/bin/
+hardfp/opt/vc/sbin/* /usr/sbin/

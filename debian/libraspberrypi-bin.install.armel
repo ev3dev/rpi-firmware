@@ -1,2 +1,2 @@
-opt/vc/bin/*
-opt/vc/sbin/*
+opt/vc/bin/* /usr/bin/
+opt/vc/sbin/* /usr/sbin/

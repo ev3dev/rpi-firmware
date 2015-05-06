@@ -1,3 +1,2 @@
-etc/ld.so.conf.d/00-vmcs.conf
-hardfp/opt/vc/lib/lib*.so /opt/vc/lib/
-hardfp/opt/vc/lib/plugins /opt/vc/lib/plugins
+hardfp/opt/vc/lib/lib*.so /usr/lib/vc/
+hardfp/opt/vc/lib/plugins /usr/lib/vc/plugins

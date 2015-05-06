@@ -1,2 +1,2 @@
-hardfp/opt/vc/include/* /opt/vc/include/
-hardfp/opt/vc/lib/lib*.a /opt/vc/lib/
+hardfp/opt/vc/include/* /usr/include/vc/
+hardfp/opt/vc/lib/lib*.a /usr/lib/vc/

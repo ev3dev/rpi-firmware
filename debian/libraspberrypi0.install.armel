@@ -1,3 +1,2 @@
-etc/ld.so.conf.d/00-vmcs.conf
-opt/vc/lib/lib*.so
-opt/vc/lib/plugins
+opt/vc/lib/lib*.so /usr/lib/vc/
+opt/vc/lib/plugins /usr/lib/vc/plugins
