@@ -1,3 +1,16 @@
+raspberrypi-firmware (1.20150513-1ev3dev1) stable; urgency=medium
+
+  * [raspberrypi-bootloader] Remove device tree files from package.
+  * [raspberrypi-bootloader] Install bootloader files to /usr/lib/raspberrypi-bootloader
+  * Add overlays README to proper debian doc location.
+  * Use debhelper for udev rules
+  * Don't install stuff in /opt
+  * update lintian overrides
+  * Update bootloader postinst to pull infomation from flash-kernel
+  * Merge upstream firmware commit c7ec740caa359634d197249297ea597067e70180
+
+ -- David Lechner <david@lechnology.com>  Wed, 13 May 2015 10:58:53 -0500
+
 raspberrypi-firmware (1.20150212-1ev3dev1) stable; urgency=medium
 
   * ev3dev takeover
