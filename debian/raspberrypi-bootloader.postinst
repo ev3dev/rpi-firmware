@@ -2,10 +2,32 @@
 
 set -e
 
-# copy the bootloader files to the FAT partition on the SD card
-tempdir=$(mktemp -dt "rpi-boot.XXXXXXXX")
-mount /dev/mmcblk0p1 ${tempdir}
-cp /usr/lib/raspberrypi-bootloader/* ${tempdir}
-umount ${tempdir}
+# This uses info from the flash-kernel db to figure out where to copy the
+# the bootloader files.
+
+FK_DIR="/usr/share/flash-kernel"
+
+. "${FK_CHECKOUT:-$FK_DIR}/functions"
+
+get_machine
+
+if ! check_supported "${machine}"; then
+    error "Unsupported platform."
+fi
+
+boot_device="$(get_machine_field "${machine}" "Boot-Device")" || :
+boot_kernel_path="$(get_machine_field "${machine}" "Boot-Kernel-Path")" || :
+
+boot_kernel_dir=$(dirname ${boot_kernel_path});
+
+if [ ! -z "${boot_device}" ]; then
+    # copy the bootloader files to the FAT partition on the SD card
+    tempdir=$(mktemp -dt "rpi-boot.XXXXXXXX")
+    mount ${boot_device} ${tempdir}
+    cp -f /usr/lib/raspberrypi-bootloader/* "${tempdir}/${boot_kernel_dir}/"
+    umount ${tempdir}
+else
+    cp -f /usr/lib/raspberrypi-bootloader/* "/${boot_kernel_dir}/"
+fi
 
 #DEBHELPER#

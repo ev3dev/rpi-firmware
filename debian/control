@@ -47,7 +47,6 @@ Description: Miscellaneous Raspberry Pi utilities
 Package: raspberrypi-bootloader
 Section: admin
 Architecture: armel armhf
-Depends: ${misc:Depends}
+Depends: flash-kernel, ${misc:Depends}
 Description: Raspberry Pi bootloader
- This package contains the Raspberry Pi bootloader (plus, temporarily, a
- kernel).
+ This package contains the Raspberry Pi bootloader.
