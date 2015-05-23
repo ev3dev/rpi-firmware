@@ -1,2 +1,2 @@
-hardfp/opt/vc/include/* /usr/include/vc/
-hardfp/opt/vc/lib/lib*.a /usr/lib/vc/
+hardfp/opt/vc/include/* /usr/include/raspberrypi/
+hardfp/opt/vc/lib/lib*.a /usr/lib/raspberrypi/

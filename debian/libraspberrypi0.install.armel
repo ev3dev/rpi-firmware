@@ -1,2 +1,2 @@
-opt/vc/lib/lib*.so /usr/lib/vc/
-opt/vc/lib/plugins /usr/lib/vc/plugins
+opt/vc/lib/lib*.so /usr/lib/
+opt/vc/lib/plugins /usr/lib/raspberrypi/

@@ -1,2 +1,2 @@
-hardfp/opt/vc/lib/lib*.so /usr/lib/vc/
-hardfp/opt/vc/lib/plugins /usr/lib/vc/plugins
+hardfp/opt/vc/lib/lib*.so /usr/lib/
+hardfp/opt/vc/lib/plugins /usr/lib/raspberrypi/
