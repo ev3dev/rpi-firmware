@@ -1,8 +1,8 @@
-raspberrypi-firmware (1.20150513-1ev3dev2~3) stable; urgency=medium
+raspberrypi-firmware (1.20150513-1ev3dev2) stable; urgency=medium
 
-  * 
+  * Move /usr/lib/vc/ to /usr/lib/
 
- -- David Lechner <david@lechnology.com>  Sat, 23 May 2015 11:04:28 -0500
+ -- David Lechner <david@lechnology.com>  Sat, 23 May 2015 12:06:19 -0500
 
 raspberrypi-firmware (1.20150513-1ev3dev1) stable; urgency=medium
 
