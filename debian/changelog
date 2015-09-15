@@ -1,3 +1,57 @@
+raspberrypi-firmware (1.20150914-1ev3dev1) stable; urgency=medium
+
+  [ Phil Elwell ]
+  * Fix typos in overlays README
+
+  [ popcornmix ]
+  * firmware: Fix issue with voltage not being set on Pi2 causing overclock
+    issues
+  * firmware: Fix for identifying older model B Pi
+
+  [ Phil Elwell ]
+  * Update boot/overlays/README
+
+  [ popcornmix ]
+  * firmware: arm_loader: Fix for emmc clock being left at low frequency during
+    turbo
+  * Update to latest overlays README
+  * firmware: hdmi: Don't reject 3D modes based on edid Allows 3D to be switched
+    to without explicit support in edid
+  * firmware: di_adv: Fix for crash with qpu deinterlace
+  * firmware: di_adv: Fix for non-interlaced frames with qpu deinterlace
+    firmware: di_adv: Updated version of qpu code firmware: di_adv: Bump up
+    thread priority when doing qpu deinterlace See: http://forum.kodi.tv/
+    showthread.php?tid=231092&pid=2053307#pid2053307
+  * firmware: video_decode: Ensure there really is a non-unknown timestamp at
+     start See: https://github.com/raspberrypi/firmware/issues/451
+  * firmware: arm_loader: Make turbo request reference counted rather than
+     boolean
+  * firmware: di_adv: Revert: Request turbo mode when doing qpu deinterlace
+  * firmware: arm_loader: Fix unwanted lock release with turbo mode See:
+    http://forum.kodi.tv/showthread.php?tid=231092&pid=2069736#pid2069736
+  * firmware: power: reduce unnecessary register writes when setting voltages
+  * firmware: arm_loader: Force turbo changes to first core. Changing sdram
+    isn't safe from second core See: http://forum.kodi.tv/showthread.php?tid=
+    231092&pid=2078190#pid2078190
+  * firmware: clock: Add freq volt lock around measure_clock. Has been observed
+    to kill a changing clock source
+  * firmware: arm_loader: change migrate to first core to be outside of
+    freq_volt lock to avoid deadlock See: http://forum.kodi.tv/showthread.php?
+    tid=231092&pid=2079297#pid2079297
+  * firmware: vdec3: Fix regression from refactor userdata release mechanics in
+    categoriser commit See: http://forum.kodi.tv/showthread.php?tid=231092&
+    pid=2060727#pid2060727
+  * firmware: Close the I2C driver in the touchscreen driver after use See:
+    https://github.com/raspberrypi/firmware/issues/192
+  * firmware: hdmi: disable dhcp completely to avoid registered i2c user See:
+    https://github.com/raspberrypi/firmware/issues/192
+  * firmware: di_adv: Only acquire ush once per file not per frame
+  * firmware: platform: Support reading new satellite oscillators
+  * firmware: arm_loader: Initialise the ARM display layer to -127 See:
+     https://github.com/raspberrypi/linux/issues/1128
+
+ -- David Lechner <david@lechnology.com>  Mon, 14 Sep 2015 23:39:26 -0500
+
 raspberrypi-firmware (1.20150513-1ev3dev2) stable; urgency=medium
 
   * Move /usr/lib/vc/ to /usr/lib/
