@@ -1,3 +1,9 @@
+raspberrypi-firmware (1.20160613-1ev3dev1) stable; urgency=medium
+
+  * Merge latest upstream firmware.
+
+ -- David Lechner <david@lechnology.com>  Tue, 14 Jun 2016 17:06:23 -0500
+
 raspberrypi-firmware (1.20160506-1ev3dev1) stable; urgency=medium
 
   * Merge latest upstream firmware. 
